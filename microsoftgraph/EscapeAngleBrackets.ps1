@@ -193,7 +193,7 @@ function Special-Escape{
 	cd ..
     git add $FilePath
     git commit -m "Docs cleanup for $ModuleName-$GraphProfile" 
-	cd microsoftgraph	
+	cd microsoftgraph-docs-powershell\microsoftgraph	
 	}catch{
 	Write-Host "`nError Message: " $_.Exception.Message
 	Write-Host "`nError in Line: " $_.InvocationInfo.Line
