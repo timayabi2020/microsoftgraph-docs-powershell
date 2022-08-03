@@ -224,4 +224,6 @@ $text = Get-Content -Path $filePath
 return $false	
 }
 Escape-Angle-Brackets -ModulesToGenerate $ModulesToGenerate
+cd microsoftgraph-docs-powershell
+git push -u origin
 Write-Host -ForegroundColor Green "-------------Done-------------"
