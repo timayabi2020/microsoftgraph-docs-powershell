@@ -98,8 +98,11 @@ function Add-Back-Ticks{
     foreach($content in $text){
        if($content -match "(.*?)>+:"){
          if($content -match "[[+*?]"){
+			  if($content -match "\[]>+:"){
+			  }else{
             $content = $content -replace '[[+*?]','\$&'
-         }
+			  }
+        } 
             $splitted = $content.Split(" ")
 			$org = $splitted[1]
 			$furtherSplitted = $splitted.Split(":")
