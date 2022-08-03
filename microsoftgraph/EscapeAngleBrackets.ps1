@@ -189,10 +189,11 @@ function Special-Escape{
 			Move-Item -Path $tempFilePath -Destination $filePath
 	   }
 	 }
-	cd $(System.DefaultWorkingDirectory)
-	cd microsoftgraph-docs-powershell
+	
+	cd ..
     git add $FilePath
-    git commit -m "Docs cleanup for $ModuleName-$GraphProfile"  
+    git commit -m "Docs cleanup for $ModuleName-$GraphProfile" 
+	cd microsoftgraph	
 	}catch{
 	Write-Host "`nError Message: " $_.Exception.Message
 	Write-Host "`nError in Line: " $_.InvocationInfo.Line
