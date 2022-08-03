@@ -141,6 +141,7 @@ function Refine_File{
     $tempFilePath = "$env:TEMP\$($FilePath | Split-Path -Leaf)"
 
     $replace = ""
+	try{
     $text = Get-Content -Path $FilePath
     foreach($content in $text){
        if($content -match "\]>``+:"){
@@ -151,6 +152,12 @@ function Refine_File{
     Remove-Item -Path $FilePath
     Move-Item -Path $tempFilePath -Destination $FilePath
     Special-Escape -FilePath $FilePath -GraphProfile $GraphProfile -ModuleName $ModuleName
+	}catch{
+	Write-Host "`nError Message: " $_.Exception.Message
+	Write-Host "`nError in Line: " $_.InvocationInfo.Line
+	Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+	Write-Host "`nError Item Name: "$_.Exception.ItemName
+	}
 }
 
 function Special-Escape{
@@ -170,6 +177,7 @@ function Special-Escape{
     $s.Add("3", "<at id='{index}'>") 
     $s.Add("4", "<application-client-id>")
     $s.Add("5", "<data-id>") 
+	try{
     $s.Values | ForEach-Object {  
     $string = $_
 	$a = $string.Replace('<','`<').Replace('>','>`')
@@ -181,8 +189,16 @@ function Special-Escape{
 			Move-Item -Path $tempFilePath -Destination $filePath
 	   }
 	 }
+	cd $(System.DefaultWorkingDirectory)
+	cd microsoftgraph-docs-powershell
     git add $FilePath
     git commit -m "Docs cleanup for $ModuleName-$GraphProfile"  
+	}catch{
+	Write-Host "`nError Message: " $_.Exception.Message
+	Write-Host "`nError in Line: " $_.InvocationInfo.Line
+	Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+	Write-Host "`nError Item Name: "$_.Exception.ItemName
+	}
 }
 function Check-If-Already-Escaped{
 param (
