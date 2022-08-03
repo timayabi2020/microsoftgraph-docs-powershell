@@ -94,6 +94,7 @@ function Add-Back-Ticks{
 
     $findEnd='>'
     $replaceEnd = '>`'
+	try{
     $text = Get-Content -Path $FilePath
     foreach($content in $text){
        if($content -match "(.*?)>+:"){
@@ -120,6 +121,13 @@ function Add-Back-Ticks{
     Remove-Item -Path $FilePath
     Move-Item -Path $tempFilePath -Destination $FilePath
     Refine_File -FilePath $FilePath -GraphProfile $GraphProfile -ModuleName $ModuleName
+	}catch{
+	Write-Host "`nError Message: " $_.Exception.Message
+	Write-Host "`nError in Line: " $_.InvocationInfo.Line
+	Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+	Write-Host "`nError Item Name: "$_.Exception.ItemName
+
+	}
 }
 function Refine_File{
     param (
