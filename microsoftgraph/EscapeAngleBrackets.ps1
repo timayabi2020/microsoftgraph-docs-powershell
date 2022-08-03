@@ -73,10 +73,17 @@ function Update-Files{
         [ValidateNotNullOrEmpty()]
         [string] $ModuleName = "Users"
     )
+	try{
     foreach($filePath in Get-ChildItem $ModuleDocsPath){
       Add-Back-Ticks -FilePath $filePath -GraphProfile $GraphProfile -ModuleName $ModuleName
       #Start-Sleep -Seconds 5
     }
+	}catch{
+	Write-Host "`nError Message: " $_.Exception.Message
+	Write-Host "`nError in Line: " $_.InvocationInfo.Line
+	Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+	Write-Host "`nError Item Name: "$_.Exception.ItemName
+	}
 }
 function Add-Back-Ticks{
     param (
