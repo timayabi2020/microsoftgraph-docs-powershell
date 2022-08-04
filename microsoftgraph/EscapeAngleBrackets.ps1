@@ -190,17 +190,14 @@ function Special-Escape{
 	$a = $string.Replace('<','`<').Replace('>','>`')
 		  $escaped = Check-If-Already-Escaped -Val $string
         if($escaped -eq $false){
-		   Write-Host "Escaping " + $string
 		   (Get-Content -Path $filePath) -replace $string, $a | Add-Content -Path $tempFilePath
 			Remove-Item -Path $filePath
 			Move-Item -Path $tempFilePath -Destination $filePath
 	   }
 	 }
 	$location = Get-Location
-	Write-Host "Location before " $location
 	cd microsoftgraph-docs-powershell
 	$location = Get-Location
-	Write-Host "Location after " $location
     git add $FilePath
     git commit -m "Docs cleanup for $ModuleName-$GraphProfile" 
 	cd ..	
@@ -217,6 +214,7 @@ param (
         [string] $Val
 )
 $text = Get-Content -Path $filePath
+try{
  foreach($_ in $text){
   if($_ -match $Val)
   {
@@ -227,7 +225,13 @@ $text = Get-Content -Path $filePath
 		  }			 
 	  }
   }
- }	 
+ }
+}catch{
+	Write-Host "`nError Message: " $_.Exception.Message
+	Write-Host "`nError in Line: " $_.InvocationInfo.Line
+	Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+	Write-Host "`nError Item Name: "$_.Exception.ItemName
+}	
 return $false	
 }
 Escape-Angle-Brackets -ModulesToGenerate $ModulesToGenerate
