@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft.Graph.DirectoryObjects
-Module Guid: 8f3a913d-f11d-45c6-abfa-070cf206a3bd
+Module Guid: 78f4eb54-0fef-4cad-8be1-5f2e943ff9e8
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.directoryobjects
 Help Version: 1.0.0.0
 Locale: en-US
@@ -37,6 +37,9 @@ Add new entity to directoryObjects
 
 ### [Remove-MgDirectoryObject](Remove-MgDirectoryObject.md)
 Delete entity from directoryObjects
+
+### [Restore-MgDirectoryObject](Restore-MgDirectoryObject.md)
+Invoke action restore
 
 ### [Test-MgDirectoryObjectProperty](Test-MgDirectoryObjectProperty.md)
 Invoke action validateProperties
