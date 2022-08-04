@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Graph.Identity.Governance-help.xml
+external help file:
 Module Name: Microsoft.Graph.Identity.Governance
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.identity.governance/new-mgprivilegedaccessresourceroleassignmentrequest
 schema: 2.0.0
@@ -14,20 +14,28 @@ Create new navigation property to roleAssignmentRequests for privilegedAccess
 
 ### CreateExpanded (Default)
 ```
-New-MgPrivilegedAccessResourceRoleAssignmentRequest -GovernanceResourceId <String> -PrivilegedAccessId <String>
- [-AdditionalProperties <Hashtable>] [-AssignmentState <String>] [-Id <String>]
+New-MgPrivilegedAccessResourceRoleAssignmentRequest -GovernanceResourceId <String>
+ -PrivilegedAccessId <String> [-AdditionalProperties <Hashtable>] [-AssignmentState <String>] [-Id <String>]
  [-LinkedEligibleRoleAssignmentId <String>] [-Reason <String>] [-RequestedDateTime <DateTime>]
  [-Resource <IMicrosoftGraphGovernanceResource>] [-ResourceId <String>]
  [-RoleDefinition <IMicrosoftGraphGovernanceRoleDefinition>] [-RoleDefinitionId <String>]
  [-Schedule <IMicrosoftGraphGovernanceSchedule>]
- [-Status <IMicrosoftGraphGovernanceRoleAssignmentRequestStatus>] [-Subject <IMicrosoftGraphGovernanceSubject>]
- [-SubjectId <String>] [-Type <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Status <IMicrosoftGraphGovernanceRoleAssignmentRequestStatus>]
+ [-Subject <IMicrosoftGraphGovernanceSubject>] [-SubjectId <String>] [-Type <String>] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-MgPrivilegedAccessResourceRoleAssignmentRequest -GovernanceResourceId <String> -PrivilegedAccessId <String>
- -BodyParameter <IMicrosoftGraphGovernanceRoleAssignmentRequest> [-WhatIf] [-Confirm] [<CommonParameters>]
+New-MgPrivilegedAccessResourceRoleAssignmentRequest -GovernanceResourceId <String>
+ -PrivilegedAccessId <String> -BodyParameter <IMicrosoftGraphGovernanceRoleAssignmentRequest> [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### CreateViaIdentity
+```
+New-MgPrivilegedAccessResourceRoleAssignmentRequest -InputObject <IIdentityGovernanceIdentity>
+ -BodyParameter <IMicrosoftGraphGovernanceRoleAssignmentRequest> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentityExpanded
@@ -38,14 +46,9 @@ New-MgPrivilegedAccessResourceRoleAssignmentRequest -InputObject <IIdentityGover
  [-Resource <IMicrosoftGraphGovernanceResource>] [-ResourceId <String>]
  [-RoleDefinition <IMicrosoftGraphGovernanceRoleDefinition>] [-RoleDefinitionId <String>]
  [-Schedule <IMicrosoftGraphGovernanceSchedule>]
- [-Status <IMicrosoftGraphGovernanceRoleAssignmentRequestStatus>] [-Subject <IMicrosoftGraphGovernanceSubject>]
- [-SubjectId <String>] [-Type <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### CreateViaIdentity
-```
-New-MgPrivilegedAccessResourceRoleAssignmentRequest -InputObject <IIdentityGovernanceIdentity>
- -BodyParameter <IMicrosoftGraphGovernanceRoleAssignmentRequest> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Status <IMicrosoftGraphGovernanceRoleAssignmentRequestStatus>]
+ [-Subject <IMicrosoftGraphGovernanceSubject>] [-SubjectId <String>] [-Type <String>] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +62,7 @@ Create new navigation property to roleAssignmentRequests for privilegedAccess
 Additional Parameters
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -76,7 +79,7 @@ The state of the assignment.
 The possible values are: Eligible (for eligible assignment), Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -92,7 +95,7 @@ governanceRoleAssignmentRequest
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphGovernanceRoleAssignmentRequest
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceRoleAssignmentRequest
 Parameter Sets: Create, CreateViaIdentity
 Aliases:
 
@@ -107,8 +110,8 @@ Accept wildcard characters: False
 key: id of governanceResource
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -122,7 +125,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -138,8 +141,8 @@ Identity Parameter
 To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: IIdentityGovernanceIdentity
-Parameter Sets: CreateViaIdentityExpanded, CreateViaIdentity
+Type: Microsoft.Graph.PowerShell.Models.IIdentityGovernanceIdentity
+Parameter Sets: CreateViaIdentity, CreateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -153,7 +156,7 @@ Accept wildcard characters: False
 If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -168,8 +171,8 @@ Accept wildcard characters: False
 key: id of privilegedAccess
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -183,7 +186,7 @@ Accept wildcard characters: False
 A message provided by users and administrators when create the request about why it is needed.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -201,7 +204,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
 For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -217,7 +220,7 @@ governanceResource
 To construct, please use Get-Help -Online and see NOTES section for RESOURCE properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphGovernanceResource
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceResource
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -234,7 +237,7 @@ The unique identifier of the Azure resource that is associated with the role ass
 Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -250,7 +253,7 @@ governanceRoleDefinition
 To construct, please use Get-Help -Online and see NOTES section for ROLEDEFINITION properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphGovernanceRoleDefinition
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceRoleDefinition
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -266,7 +269,7 @@ Required.
 The identifier of the Azure role definition that the role assignment request is associated with.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -282,7 +285,7 @@ governanceSchedule
 To construct, please use Get-Help -Online and see NOTES section for SCHEDULE properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphGovernanceSchedule
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceSchedule
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -298,7 +301,7 @@ governanceRoleAssignmentRequestStatus
 To construct, please use Get-Help -Online and see NOTES section for STATUS properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphGovernanceRoleAssignmentRequestStatus
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceRoleAssignmentRequestStatus
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -314,7 +317,7 @@ governanceSubject
 To construct, please use Get-Help -Online and see NOTES section for SUBJECT properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphGovernanceSubject
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceSubject
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -331,7 +334,7 @@ The unique identifier of the principal or subject that the role assignment reque
 Principals can be users, groups, or service principals.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -348,7 +351,7 @@ Representing the type of the operation on the role assignment.
 The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -363,7 +366,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -379,7 +382,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -396,10 +399,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IIdentityGovernanceIdentity
+
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceRoleAssignmentRequest
+
 ## OUTPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphGovernanceRoleAssignmentRequest
+
 ## NOTES
 
 ALIASES
@@ -509,6 +515,7 @@ INPUTOBJECT `<IIdentityGovernanceIdentity>`: Identity Parameter
   - `[AccessPackageResourceRoleId <String>]`: key: id of accessPackageResourceRole
   - `[AccessPackageResourceRoleScopeId <String>]`: key: id of accessPackageResourceRoleScope
   - `[AccessPackageResourceScopeId <String>]`: key: id of accessPackageResourceScope
+  - `[AccessPackageSubjectId <String>]`: key: id of accessPackageSubject
   - `[AccessReviewDecisionId <String>]`: key: id of accessReviewDecision
   - `[AccessReviewHistoryDefinitionId <String>]`: key: id of accessReviewHistoryDefinition
   - `[AccessReviewHistoryInstanceId <String>]`: key: id of accessReviewHistoryInstance
@@ -748,4 +755,3 @@ SUBJECT `<IMicrosoftGraphGovernanceSubject>`: governanceSubject
 
 ## RELATED LINKS
 
-## RELATED LINKS
