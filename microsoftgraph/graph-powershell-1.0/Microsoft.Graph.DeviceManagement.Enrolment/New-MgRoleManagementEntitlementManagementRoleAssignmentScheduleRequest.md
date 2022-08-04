@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Graph.DeviceManagement.Enrolment-help.xml
+external help file:
 Module Name: Microsoft.Graph.DeviceManagement.Enrolment
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.devicemanagement.enrolment/new-mgrolemanagemententitlementmanagementroleassignmentschedulerequest
 schema: 2.0.0
@@ -16,20 +16,21 @@ Create new navigation property to roleAssignmentScheduleRequests for roleManagem
 ```
 New-MgRoleManagementEntitlementManagementRoleAssignmentScheduleRequest [-Action <String>]
  [-ActivatedUsing <IMicrosoftGraphUnifiedRoleEligibilitySchedule>] [-AdditionalProperties <Hashtable>]
- [-AppScope <IMicrosoftGraphAppScope>] [-AppScopeId <String>] [-ApprovalId <String>]
+ [-ApprovalId <String>] [-AppScope <IMicrosoftGraphAppScope>] [-AppScopeId <String>]
  [-CompletedDateTime <DateTime>] [-CreatedBy <IMicrosoftGraphIdentitySet>] [-CreatedDateTime <DateTime>]
  [-CustomData <String>] [-DirectoryScope <IMicrosoftGraphDirectoryObject>] [-DirectoryScopeId <String>]
  [-Id <String>] [-IsValidationOnly] [-Justification <String>] [-Principal <IMicrosoftGraphDirectoryObject>]
- [-PrincipalId <String>] [-RoleDefinition <IMicrosoftGraphUnifiedRoleDefinition1>] [-RoleDefinitionId <String>]
- [-ScheduleInfo <IMicrosoftGraphRequestSchedule>] [-Status <String>]
+ [-PrincipalId <String>] [-RoleDefinition <IMicrosoftGraphUnifiedRoleDefinition1>]
+ [-RoleDefinitionId <String>] [-ScheduleInfo <IMicrosoftGraphRequestSchedule>] [-Status <String>]
  [-TargetSchedule <IMicrosoftGraphUnifiedRoleAssignmentSchedule>] [-TargetScheduleId <String>]
- [-TicketInfo <IMicrosoftGraphTicketInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TicketInfo <IMicrosoftGraphTicketInfo>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Create1
 ```
 New-MgRoleManagementEntitlementManagementRoleAssignmentScheduleRequest
- -BodyParameter <IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BodyParameter <IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest> [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +44,7 @@ Create new navigation property to roleAssignmentScheduleRequests for roleManagem
 unifiedRoleScheduleRequestActions
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -59,7 +60,7 @@ unifiedRoleEligibilitySchedule
 To construct, please use Get-Help -Online and see NOTES section for ACTIVATEDUSING properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphUnifiedRoleEligibilitySchedule
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphUnifiedRoleEligibilitySchedule
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 Additional Parameters
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -89,7 +90,7 @@ Accept wildcard characters: False
 The identifier of the approval of the request.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -105,7 +106,7 @@ appScope
 To construct, please use Get-Help -Online and see NOTES section for APPSCOPE properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphAppScope
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphAppScope
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -125,7 +126,7 @@ Use directoryScopeId to limit the scope to particular directory objects, for exa
 Supports $filter (eq, ne, and on null values).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -141,7 +142,7 @@ unifiedRoleAssignmentScheduleRequest
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest
 Parameter Sets: Create1
 Aliases:
 
@@ -156,7 +157,7 @@ Accept wildcard characters: False
 The request completion date time.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -172,7 +173,7 @@ identitySet
 To construct, please use Get-Help -Online and see NOTES section for CREATEDBY properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphIdentitySet
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphIdentitySet
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -187,7 +188,7 @@ Accept wildcard characters: False
 The request creation date time.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -203,7 +204,7 @@ Free text field to define any custom data for the request.
 Not used.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -219,7 +220,7 @@ directoryObject
 To construct, please use Get-Help -Online and see NOTES section for DIRECTORYSCOPE properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphDirectoryObject
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphDirectoryObject
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -239,7 +240,7 @@ Use appScopeId to limit the scope to an application only.
 Supports $filter (eq, ne, and on null values).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -254,7 +255,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -270,7 +271,7 @@ Determines whether the call is a validation or an actual call.
 Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -285,7 +286,7 @@ Accept wildcard characters: False
 A message provided by users and administrators when create they create the unifiedRoleAssignmentScheduleRequest object.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -301,7 +302,7 @@ directoryObject
 To construct, please use Get-Help -Online and see NOTES section for PRINCIPAL properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphDirectoryObject
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphDirectoryObject
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -317,7 +318,7 @@ Identifier of the principal that has been granted the assignment.
 Supports $filter (eq, ne).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -333,7 +334,7 @@ unifiedRoleDefinition
 To construct, please use Get-Help -Online and see NOTES section for ROLEDEFINITION properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphUnifiedRoleDefinition1
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphUnifiedRoleDefinition1
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -349,7 +350,7 @@ Identifier of the unifiedRoleDefinition object that is being assigned to the pri
 Supports $filter (eq, ne).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -365,7 +366,7 @@ requestSchedule
 To construct, please use Get-Help -Online and see NOTES section for SCHEDULEINFO properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphRequestSchedule
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphRequestSchedule
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -383,7 +384,7 @@ The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision
 Not nullable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -399,7 +400,7 @@ unifiedRoleAssignmentSchedule
 To construct, please use Get-Help -Online and see NOTES section for TARGETSCHEDULE properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphUnifiedRoleAssignmentSchedule
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphUnifiedRoleAssignmentSchedule
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -415,7 +416,7 @@ Identifier of the schedule object that's linked to the assignment request.
 Supports $filter (eq, ne).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -431,7 +432,7 @@ ticketInfo
 To construct, please use Get-Help -Online and see NOTES section for TICKETINFO properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTicketInfo
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTicketInfo
 Parameter Sets: CreateExpanded1
 Aliases:
 
@@ -446,7 +447,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -462,7 +463,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -479,9 +480,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest
+
 ## OUTPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest
+
 ## NOTES
 
 ALIASES
@@ -527,7 +530,7 @@ ACTIVATEDUSING `<IMicrosoftGraphUnifiedRoleEligibilitySchedule>`: unifiedRoleEli
   - `[RoleDefinitionId <String>]`: Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
   - `[Status <String>]`: The status of the role assignment or eligibility request.
   - `[Id <String>]`: 
-  - `[MemberType <String>]`: Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+  - `[MemberType <String>]`: Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
   - `[ScheduleInfo <IMicrosoftGraphRequestSchedule>]`: requestSchedule
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
     - `[Expiration <IMicrosoftGraphExpirationPattern>]`: expirationPattern
@@ -569,7 +572,7 @@ BODYPARAMETER `<IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest>`: unifiedRo
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
     - `[Application <IMicrosoftGraphIdentity>]`: identity
       - `[(Any) <Object>]`: This indicates any property can be added to this object.
-      - `[DisplayName <String>]`: The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+      - `[DisplayName <String>]`: The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
       - `[Id <String>]`: Unique identifier for the identity.
     - `[Device <IMicrosoftGraphIdentity>]`: identity
     - `[User <IMicrosoftGraphIdentity>]`: identity
@@ -614,7 +617,7 @@ BODYPARAMETER `<IMicrosoftGraphUnifiedRoleAssignmentScheduleRequest>`: unifiedRo
     - `[RoleDefinitionId <String>]`: Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
     - `[Status <String>]`: The status of the role assignment or eligibility request.
     - `[Id <String>]`: 
-    - `[MemberType <String>]`: Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+    - `[MemberType <String>]`: Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
     - `[ScheduleInfo <IMicrosoftGraphRequestSchedule>]`: requestSchedule
       - `[(Any) <Object>]`: This indicates any property can be added to this object.
       - `[Expiration <IMicrosoftGraphExpirationPattern>]`: expirationPattern
@@ -681,7 +684,7 @@ CREATEDBY `<IMicrosoftGraphIdentitySet>`: identitySet
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Application <IMicrosoftGraphIdentity>]`: identity
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
-    - `[DisplayName <String>]`: The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+    - `[DisplayName <String>]`: The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
     - `[Id <String>]`: Unique identifier for the identity.
   - `[Device <IMicrosoftGraphIdentity>]`: identity
   - `[User <IMicrosoftGraphIdentity>]`: identity
@@ -790,7 +793,7 @@ TARGETSCHEDULE `<IMicrosoftGraphUnifiedRoleAssignmentSchedule>`: unifiedRoleAssi
     - `[RoleDefinitionId <String>]`: Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
     - `[Status <String>]`: The status of the role assignment or eligibility request.
     - `[Id <String>]`: 
-    - `[MemberType <String>]`: Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+    - `[MemberType <String>]`: Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
     - `[ScheduleInfo <IMicrosoftGraphRequestSchedule>]`: requestSchedule
       - `[(Any) <Object>]`: This indicates any property can be added to this object.
       - `[Expiration <IMicrosoftGraphExpirationPattern>]`: expirationPattern
@@ -828,4 +831,3 @@ TICKETINFO `<IMicrosoftGraphTicketInfo>`: ticketInfo
 
 ## RELATED LINKS
 
-## RELATED LINKS
