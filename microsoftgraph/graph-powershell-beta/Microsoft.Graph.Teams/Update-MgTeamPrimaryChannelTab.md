@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Graph.Teams-help.xml
+external help file:
 Module Name: Microsoft.Graph.Teams
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.teams/update-mgteamprimarychanneltab
 schema: 2.0.0
@@ -17,13 +17,19 @@ Update the navigation property tabs in teams
 Update-MgTeamPrimaryChannelTab -TeamId <String> -TeamsTabId <String> [-AdditionalProperties <Hashtable>]
  [-Configuration <IMicrosoftGraphTeamsTabConfiguration>] [-DisplayName <String>] [-Id <String>]
  [-MessageId <String>] [-SortOrderIndex <String>] [-TeamsApp <IMicrosoftGraphTeamsApp>] [-TeamsAppId <String>]
- [-WebUrl <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WebUrl <String>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Update1
 ```
 Update-MgTeamPrimaryChannelTab -TeamId <String> -TeamsTabId <String> -BodyParameter <IMicrosoftGraphTeamsTab1>
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### UpdateViaIdentity1
+```
+Update-MgTeamPrimaryChannelTab -InputObject <ITeamsIdentity> -BodyParameter <IMicrosoftGraphTeamsTab1>
+ [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded1
@@ -31,13 +37,7 @@ Update-MgTeamPrimaryChannelTab -TeamId <String> -TeamsTabId <String> -BodyParame
 Update-MgTeamPrimaryChannelTab -InputObject <ITeamsIdentity> [-AdditionalProperties <Hashtable>]
  [-Configuration <IMicrosoftGraphTeamsTabConfiguration>] [-DisplayName <String>] [-Id <String>]
  [-MessageId <String>] [-SortOrderIndex <String>] [-TeamsApp <IMicrosoftGraphTeamsApp>] [-TeamsAppId <String>]
- [-WebUrl <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### UpdateViaIdentity1
-```
-Update-MgTeamPrimaryChannelTab -InputObject <ITeamsIdentity> -BodyParameter <IMicrosoftGraphTeamsTab1>
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WebUrl <String>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +51,7 @@ Update the navigation property tabs in teams
 Additional Parameters
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -67,7 +67,7 @@ teamsTab
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTeamsTab1
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTeamsTab1
 Parameter Sets: Update1, UpdateViaIdentity1
 Aliases:
 
@@ -83,7 +83,7 @@ teamsTabConfiguration
 To construct, please use Get-Help -Online and see NOTES section for CONFIGURATION properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTeamsTabConfiguration
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTeamsTabConfiguration
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 Name of the tab.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -129,8 +129,8 @@ Identity Parameter
 To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: ITeamsIdentity
-Parameter Sets: UpdateViaIdentityExpanded1, UpdateViaIdentity1
+Type: Microsoft.Graph.PowerShell.Models.ITeamsIdentity
+Parameter Sets: UpdateViaIdentity1, UpdateViaIdentityExpanded1
 Aliases:
 
 Required: True
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 Returns true when the command succeeds
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 Index of the order used for sorting tabs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -189,8 +189,8 @@ Accept wildcard characters: False
 key: id of team
 
 ```yaml
-Type: String
-Parameter Sets: UpdateExpanded1, Update1
+Type: System.String
+Parameter Sets: Update1, UpdateExpanded1
 Aliases:
 
 Required: True
@@ -205,7 +205,7 @@ teamsApp
 To construct, please use Get-Help -Online and see NOTES section for TEAMSAPP properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTeamsApp
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTeamsApp
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -235,8 +235,8 @@ Accept wildcard characters: False
 key: id of teamsTab
 
 ```yaml
-Type: String
-Parameter Sets: UpdateExpanded1, Update1
+Type: System.String
+Parameter Sets: Update1, UpdateExpanded1
 Aliases:
 
 Required: True
@@ -251,7 +251,7 @@ Deep link URL of the tab instance.
 Read only.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UpdateExpanded1, UpdateViaIdentityExpanded1
 Aliases:
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -282,7 +282,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -299,10 +299,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTeamsTab1
+
 ### Microsoft.Graph.PowerShell.Models.ITeamsIdentity
+
 ## OUTPUTS
 
 ### System.Boolean
+
 ## NOTES
 
 ALIASES
@@ -347,7 +350,7 @@ BODYPARAMETER `<IMicrosoftGraphTeamsTab1>`: teamsTab
         - `[(Any) <Object>]`: This indicates any property can be added to this object.
         - `[Application <IMicrosoftGraphIdentity>]`: identity
           - `[(Any) <Object>]`: This indicates any property can be added to this object.
-          - `[DisplayName <String>]`: The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+          - `[DisplayName <String>]`: The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
           - `[Id <String>]`: Unique identifier for the identity.
         - `[Device <IMicrosoftGraphIdentity>]`: identity
         - `[User <IMicrosoftGraphIdentity>]`: identity
@@ -432,7 +435,7 @@ TEAMSAPP `<IMicrosoftGraphTeamsApp>`: teamsApp
       - `[(Any) <Object>]`: This indicates any property can be added to this object.
       - `[Application <IMicrosoftGraphIdentity>]`: identity
         - `[(Any) <Object>]`: This indicates any property can be added to this object.
-        - `[DisplayName <String>]`: The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+        - `[DisplayName <String>]`: The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
         - `[Id <String>]`: Unique identifier for the identity.
       - `[Device <IMicrosoftGraphIdentity>]`: identity
       - `[User <IMicrosoftGraphIdentity>]`: identity
@@ -449,3 +452,4 @@ TEAMSAPP `<IMicrosoftGraphTeamsApp>`: teamsApp
   - `[ExternalId <String>]`: The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
 
 ## RELATED LINKS
+
