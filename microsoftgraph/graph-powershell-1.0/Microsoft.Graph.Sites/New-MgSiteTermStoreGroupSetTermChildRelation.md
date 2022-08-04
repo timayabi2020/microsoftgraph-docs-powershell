@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Graph.Sites-help.xml
+external help file:
 Module Name: Microsoft.Graph.Sites
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.sites/new-mgsitetermstoregroupsettermchildrelation
 schema: 2.0.0
@@ -17,7 +17,7 @@ Create new navigation property to relations for sites
 New-MgSiteTermStoreGroupSetTermChildRelation -GroupId <String> -SetId <String> -SiteId <String>
  -StoreId <String> -TermId <String> -TermId1 <String> [-AdditionalProperties <Hashtable>]
  [-FromTerm <IMicrosoftGraphTermStoreTerm>] [-Id <String>] [-Relationship <String>]
- [-Set <IMicrosoftGraphTermStoreSet>] [-ToTerm <IMicrosoftGraphTermStoreTerm>] [-WhatIf] [-Confirm]
+ [-Set <IMicrosoftGraphTermStoreSet>] [-ToTerm <IMicrosoftGraphTermStoreTerm>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -25,21 +25,21 @@ New-MgSiteTermStoreGroupSetTermChildRelation -GroupId <String> -SetId <String> -
 ```
 New-MgSiteTermStoreGroupSetTermChildRelation -GroupId <String> -SetId <String> -SiteId <String>
  -StoreId <String> -TermId <String> -TermId1 <String> -BodyParameter <IMicrosoftGraphTermStoreRelation1>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### CreateViaIdentity
+```
+New-MgSiteTermStoreGroupSetTermChildRelation -InputObject <ISitesIdentity>
+ -BodyParameter <IMicrosoftGraphTermStoreRelation1> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentityExpanded
 ```
 New-MgSiteTermStoreGroupSetTermChildRelation -InputObject <ISitesIdentity> [-AdditionalProperties <Hashtable>]
  [-FromTerm <IMicrosoftGraphTermStoreTerm>] [-Id <String>] [-Relationship <String>]
- [-Set <IMicrosoftGraphTermStoreSet>] [-ToTerm <IMicrosoftGraphTermStoreTerm>] [-WhatIf] [-Confirm]
+ [-Set <IMicrosoftGraphTermStoreSet>] [-ToTerm <IMicrosoftGraphTermStoreTerm>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
-```
-
-### CreateViaIdentity
-```
-New-MgSiteTermStoreGroupSetTermChildRelation -InputObject <ISitesIdentity>
- -BodyParameter <IMicrosoftGraphTermStoreRelation1> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +53,7 @@ Create new navigation property to relations for sites
 Additional Parameters
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -69,7 +69,7 @@ relation
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTermStoreRelation1
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTermStoreRelation1
 Parameter Sets: Create, CreateViaIdentity
 Aliases:
 
@@ -85,7 +85,7 @@ term
 To construct, please use Get-Help -Online and see NOTES section for FROMTERM properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTermStoreTerm
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTermStoreTerm
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -100,8 +100,8 @@ Accept wildcard characters: False
 key: id of group
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -131,8 +131,8 @@ Identity Parameter
 To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: ISitesIdentity
-Parameter Sets: CreateViaIdentityExpanded, CreateViaIdentity
+Type: Microsoft.Graph.PowerShell.Models.ISitesIdentity
+Parameter Sets: CreateViaIdentity, CreateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -162,7 +162,7 @@ set
 To construct, please use Get-Help -Online and see NOTES section for SET properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTermStoreSet
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTermStoreSet
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -177,8 +177,8 @@ Accept wildcard characters: False
 key: id of set
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -192,8 +192,8 @@ Accept wildcard characters: False
 key: id of site
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -207,8 +207,8 @@ Accept wildcard characters: False
 key: id of store
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -222,8 +222,8 @@ Accept wildcard characters: False
 key: id of term
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -237,8 +237,8 @@ Accept wildcard characters: False
 key: id of term
 
 ```yaml
-Type: String
-Parameter Sets: CreateExpanded, Create
+Type: System.String
+Parameter Sets: Create, CreateExpanded
 Aliases:
 
 Required: True
@@ -253,7 +253,7 @@ term
 To construct, please use Get-Help -Online and see NOTES section for TOTERM properties and create a hash table.
 
 ```yaml
-Type: IMicrosoftGraphTermStoreTerm
+Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTermStoreTerm
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -284,7 +284,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -301,10 +301,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTermStoreRelation1
+
 ### Microsoft.Graph.PowerShell.Models.ISitesIdentity
+
 ## OUTPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTermStoreRelation1
+
 ## NOTES
 
 ALIASES
@@ -529,4 +532,3 @@ TOTERM `<IMicrosoftGraphTermStoreTerm>`: term
 
 ## RELATED LINKS
 
-## RELATED LINKS
