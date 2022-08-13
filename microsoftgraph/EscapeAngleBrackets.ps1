@@ -76,6 +76,7 @@ function Update-Files{
 	try{
     foreach($filePath in Get-ChildItem $ModuleDocsPath){
       Add-Back-Ticks -FilePath $filePath -GraphProfile $GraphProfile -ModuleName $ModuleName
+      #Special-Escape -FilePath $FilePath -GraphProfile $GraphProfile -ModuleName $ModuleName
       #Start-Sleep -Seconds 5
     }
 	}catch{
@@ -113,10 +114,22 @@ function Add-Back-Ticks{
         } 
             $splitted = $content.Split(" ")
 			$org = $splitted[1]
+            if($org -match "\[]>"){
+                if($org -match "\\"){
+                }else{
+				$org = $org -replace '[[+*?]','\$&'
+                }
+			}
 			$furtherSplitted = $splitted.Split(":")
 			if($furtherSplitted[1] -contains '`'){
 			}else{
 				if($furtherSplitted[1].endswith('>')){
+                    if($furtherSplitted[1] -match "\[]>"){
+                        if($furtherSplitted[1] -match "\\"){
+                        }else{
+						$furtherSplitted[1] = $furtherSplitted[1] -replace '[[+*?]','\$&'
+                        }	
+					}
 				$concat = '`'+$furtherSplitted[1]+'`'
 				$replace = $org -replace $furtherSplitted[1],$concat
 				$text = $text -replace $org,$replace
@@ -158,7 +171,7 @@ function Refine_File{
     $text > $tempFilePath
     Remove-Item -Path $FilePath
     Move-Item -Path $tempFilePath -Destination $FilePath
-    Special-Escape -FilePath $FilePath -GraphProfile $GraphProfile -ModuleName $ModuleName
+    #Special-Escape -FilePath $FilePath -GraphProfile $GraphProfile -ModuleName $ModuleName
 	}catch{
 	Write-Host "`nError Message: " $_.Exception.Message
 	Write-Host "`nError in Line: " $_.InvocationInfo.Line
@@ -187,20 +200,20 @@ function Special-Escape{
 	try{
     $s.Values | ForEach-Object {  
     $string = $_
-	$a = $string.Replace('<','`<').Replace('>','>`')
 		  $escaped = Check-If-Already-Escaped -Val $string
-        if($escaped -eq $false){
+        if($escaped -ne "NA"){
+            $a = $escaped.Replace('<','`<').Replace('>','>`')
 		   (Get-Content -Path $filePath) -replace $string, $a | Add-Content -Path $tempFilePath
 			Remove-Item -Path $filePath
 			Move-Item -Path $tempFilePath -Destination $filePath
 	   }
 	 }
-	$location = Get-Location
-	cd microsoftgraph-docs-powershell
+	#$location = Get-Location
+	#cd microsoftgraph-docs-powershell
 	$location = Get-Location
     git add $FilePath
     git commit -m "Docs cleanup for $ModuleName-$GraphProfile" 
-	cd ..	
+	#cd ..	
 	}catch{
 	Write-Host "`nError Message: " $_.Exception.Message
 	Write-Host "`nError in Line: " $_.InvocationInfo.Line
@@ -215,26 +228,25 @@ param (
 )
 $text = Get-Content -Path $filePath
 try{
- foreach($_ in $text){
-  if($_ -match $Val)
-  {
-	  $split = $_.split(" ")
-	  foreach($item in $split){
-		  if($item -match '(.*?)>+`'){
-			   return $true
-		  }			 
-	  }
-  }
- }
+
+		  $replacer = $Val.Replace('<','`<').Replace('>','>`')
+		  
+		  $t = $text | Select-String $replacer
+		
+		if(-not $t){
+			return $Val
+		}
+ 	 
+
 }catch{
 	Write-Host "`nError Message: " $_.Exception.Message
 	Write-Host "`nError in Line: " $_.InvocationInfo.Line
 	Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
 	Write-Host "`nError Item Name: "$_.Exception.ItemName
 }	
-return $false	
+return "NA"	
 }
 
 Escape-Angle-Brackets -ModulesToGenerate $ModulesToGenerate
-cd microsoftgraph-docs-powershell
+#cd microsoftgraph-docs-powershell
 Write-Host -ForegroundColor Green "-------------Done-------------"
