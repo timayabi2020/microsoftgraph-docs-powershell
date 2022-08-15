@@ -143,7 +143,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphUserExperienceAnalyticsScoreHistory>`: The user experience analytics device startup score history.
+BODYPARAMETER <IMicrosoftGraphUserExperienceAnalyticsScoreHistory>: The user experience analytics device startup score history.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[StartupDateTime <DateTime?>]`: The user experience analytics device startup date time.

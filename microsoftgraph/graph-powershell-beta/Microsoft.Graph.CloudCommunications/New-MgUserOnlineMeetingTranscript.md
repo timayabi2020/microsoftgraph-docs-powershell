@@ -77,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContentInputFile
-Input File for Content (.)
+Input File for Content (A field representing the content of the transcript.
+Read-only.)
 
 ```yaml
 Type: System.String
@@ -92,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -CreatedDateTime
-.
+Date and time at which the transcript was created.
+Read-only.
 
 ```yaml
 Type: System.DateTime
@@ -220,13 +222,13 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphCallTranscript>`: callTranscript
+BODYPARAMETER <IMicrosoftGraphCallTranscript>: callTranscript
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
-  - `[Content <Byte[]>]`: 
-  - `[CreatedDateTime <DateTime?>]`: 
+  - `[Content <Byte[]>]`: A field representing the content of the transcript. Read-only.
+  - `[CreatedDateTime <DateTime?>]`: Date and time at which the transcript was created. Read-only.
 
-INPUTOBJECT `<ICloudCommunicationsIdentity>`: Identity Parameter
+INPUTOBJECT <ICloudCommunicationsIdentity>: Identity Parameter
   - `[AttendanceRecordId <String>]`: key: id of attendanceRecord
   - `[AudioRoutingGroupId <String>]`: key: id of audioRoutingGroup
   - `[CallId <String>]`: key: id of call

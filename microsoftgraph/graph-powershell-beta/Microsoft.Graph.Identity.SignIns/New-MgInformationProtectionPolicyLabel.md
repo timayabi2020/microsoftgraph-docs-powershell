@@ -237,7 +237,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphInformationProtectionLabel>`: informationProtectionLabel
+BODYPARAMETER <IMicrosoftGraphInformationProtectionLabel>: informationProtectionLabel
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[Color <String>]`: The color that the UI should display for the label, if configured.
@@ -257,7 +257,7 @@ BODYPARAMETER `<IMicrosoftGraphInformationProtectionLabel>`: informationProtecti
   - `[Sensitivity <Int32?>]`: The sensitivity value of the label, where lower is less sensitive.
   - `[Tooltip <String>]`: The tooltip that should be displayed for the label in a UI.
 
-PARENT `<IMicrosoftGraphParentLabelDetails>`: parentLabelDetails
+PARENT <IMicrosoftGraphParentLabelDetails>: parentLabelDetails
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Color <String>]`: The color that the user interface should display for the label, if configured.
   - `[Description <String>]`: The admin-defined description for the label.

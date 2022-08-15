@@ -235,7 +235,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphSimulationAutomationRun>`: simulationAutomationRun
+BODYPARAMETER <IMicrosoftGraphSimulationAutomationRun>: simulationAutomationRun
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[EndDateTime <DateTime?>]`: Date and time when the run ends in an attack simulation automation.
@@ -243,7 +243,7 @@ BODYPARAMETER `<IMicrosoftGraphSimulationAutomationRun>`: simulationAutomationRu
   - `[StartDateTime <DateTime?>]`: Date and time when the run starts in an attack simulation automation.
   - `[Status <String>]`: simulationAutomationRunStatus
 
-INPUTOBJECT `<ISecurityIdentity>`: Identity Parameter
+INPUTOBJECT <ISecurityIdentity>: Identity Parameter
   - `[AlertId <String>]`: key: id of alert
   - `[AuthoredNoteId <String>]`: key: id of authoredNote
   - `[CaseOperationId <String>]`: key: id of caseOperation

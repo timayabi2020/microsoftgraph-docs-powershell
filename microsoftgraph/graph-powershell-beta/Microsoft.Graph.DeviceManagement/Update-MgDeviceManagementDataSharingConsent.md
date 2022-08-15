@@ -281,7 +281,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphDataSharingConsent>`: Data sharing consent information.
+BODYPARAMETER <IMicrosoftGraphDataSharingConsent>: Data sharing consent information.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[GrantDateTime <DateTime?>]`: The time consent was granted for this account
@@ -291,7 +291,7 @@ BODYPARAMETER `<IMicrosoftGraphDataSharingConsent>`: Data sharing consent inform
   - `[ServiceDisplayName <String>]`: The display name of the service work flow
   - `[TermsUrl <String>]`: The TermsUrl for the data sharing consent
 
-INPUTOBJECT `<IDeviceManagementIdentity>`: Identity Parameter
+INPUTOBJECT <IDeviceManagementIdentity>: Identity Parameter
   - `[AdvancedThreatProtectionOnboardingDeviceSettingStateId <String>]`: key: id of advancedThreatProtectionOnboardingDeviceSettingState
   - `[AndroidForWorkAppConfigurationSchemaId <String>]`: key: id of androidForWorkAppConfigurationSchema
   - `[AndroidManagedStoreAppConfigurationSchemaId <String>]`: key: id of androidManagedStoreAppConfigurationSchema

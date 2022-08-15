@@ -238,7 +238,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphWindowsHelloForBusinessAuthenticationMethod>`: windowsHelloForBusinessAuthenticationMethod
+BODYPARAMETER <IMicrosoftGraphWindowsHelloForBusinessAuthenticationMethod>: windowsHelloForBusinessAuthenticationMethod
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[CreatedDateTime <DateTime?>]`: The date and time that this Windows Hello for Business key was registered.
@@ -279,7 +279,7 @@ BODYPARAMETER `<IMicrosoftGraphWindowsHelloForBusinessAuthenticationMethod>`: wi
   - `[DisplayName <String>]`: The name of the device on which Windows Hello for Business is registered
   - `[KeyStrength <String>]`: authenticationMethodKeyStrength
 
-DEVICE `<IMicrosoftGraphDevice>`: device
+DEVICE <IMicrosoftGraphDevice>: device
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[DeletedDateTime <DateTime?>]`: Date and time when this object was deleted. Always null when the object hasn't been deleted.
   - `[Id <String>]`: 
@@ -314,7 +314,7 @@ DEVICE `<IMicrosoftGraphDevice>`: device
   - `[TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>]`: Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
   - `[TrustType <String>]`: Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
 
-INPUTOBJECT `<IIdentitySignInsIdentity>`: Identity Parameter
+INPUTOBJECT <IIdentitySignInsIdentity>: Identity Parameter
   - `[ActivityBasedTimeoutPolicyId <String>]`: key: id of activityBasedTimeoutPolicy
   - `[AppManagementPolicyId <String>]`: key: id of appManagementPolicy
   - `[AuthenticationContextClassReferenceId <String>]`: key: id of authenticationContextClassReference

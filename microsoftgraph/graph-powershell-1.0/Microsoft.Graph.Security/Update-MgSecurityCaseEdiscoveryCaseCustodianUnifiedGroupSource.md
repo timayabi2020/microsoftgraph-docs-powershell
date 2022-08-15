@@ -319,7 +319,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphSecurityUnifiedGroupSource1>`: unifiedGroupSource
+BODYPARAMETER <IMicrosoftGraphSecurityUnifiedGroupSource1>: unifiedGroupSource
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[CreatedBy <IMicrosoftGraphIdentitySet>]`: identitySet
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -691,7 +691,7 @@ BODYPARAMETER `<IMicrosoftGraphSecurityUnifiedGroupSource1>`: unifiedGroupSource
             - `[Password <String>]`: For security, the password is always returned as null from a LIST or GET operation.
           - `[PhoneMethods <IMicrosoftGraphPhoneAuthenticationMethod[]>]`: Represents the phone registered to a user for authentication.
             - `[Id <String>]`: 
-            - `[PhoneNumber <String>]`: The phone number to text or call for authentication. Phone numbers use the format '+`<country code>` <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
+            - `[PhoneNumber <String>]`: The phone number to text or call for authentication. Phone numbers use the format '+<country code> <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
             - `[PhoneType <String>]`: authenticationPhoneType
             - `[SmsSignInState <String>]`: authenticationMethodSignInState
           - `[SoftwareOathMethods <IMicrosoftGraphSoftwareOathAuthenticationMethod[]>]`: 
@@ -789,7 +789,7 @@ BODYPARAMETER `<IMicrosoftGraphSecurityUnifiedGroupSource1>`: unifiedGroupSource
             - `[LastModifiedDateTime <DateTime?>]`: Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
             - `[Locale <String>]`: Locale of the chat message set by the client. Always set to en-us.
             - `[Mentions <IMicrosoftGraphChatMessageMention[]>]`: List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
-              - `[Id <Int32?>]`: Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding `<at id='{index}'>` tag in the message body.
+              - `[Id <Int32?>]`: Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
               - `[MentionText <String>]`: String used to represent the mention. For example, a user's display name, a team name.
               - `[Mentioned <IMicrosoftGraphChatMessageMentionedIdentitySet>]`: chatMessageMentionedIdentitySet
                 - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -1070,18 +1070,32 @@ BODYPARAMETER `<IMicrosoftGraphSecurityUnifiedGroupSource1>`: unifiedGroupSource
                       - `[(Any) <Object>]`: This indicates any property can be added to this object.
                       - `[Id <String>]`: The id of the content type.
                       - `[Name <String>]`: The name of the content type.
-                    - `[DriveItem <IMicrosoftGraphDriveItem1>]`: driveItem
-                    - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
-                      - `[(Any) <Object>]`: This indicates any property can be added to this object.
-                      - `[Id <String>]`: 
-                    - `[SharepointIds <IMicrosoftGraphSharepointIds>]`: sharepointIds
-                    - `[Versions <IMicrosoftGraphListItemVersion[]>]`: The list of previous versions of the list item.
+                    - `[DocumentSetVersions <IMicrosoftGraphDocumentSetVersion[]>]`: Version information for a document set version created by a user.
+                      - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
+                        - `[(Any) <Object>]`: This indicates any property can be added to this object.
+                        - `[Id <String>]`: 
                       - `[LastModifiedBy <IMicrosoftGraphIdentitySet>]`: identitySet
                       - `[LastModifiedDateTime <DateTime?>]`: Date and time the version was last modified. Read-only.
                       - `[Publication <IMicrosoftGraphPublicationFacet>]`: publicationFacet
                         - `[(Any) <Object>]`: This indicates any property can be added to this object.
                         - `[Level <String>]`: The state of publication for this document. Either published or checkout. Read-only.
                         - `[VersionId <String>]`: The unique identifier for the version that is visible to the current caller. Read-only.
+                      - `[Id <String>]`: 
+                      - `[Comment <String>]`: Comment about the captured version.
+                      - `[CreatedBy <IMicrosoftGraphIdentitySet>]`: identitySet
+                      - `[CreatedDateTime <DateTime?>]`: Date and time when this version was created.
+                      - `[Items <IMicrosoftGraphDocumentSetVersionItem[]>]`: Items within the document set that are captured as part of this version.
+                        - `[ItemId <String>]`: The unique identifier for the item.
+                        - `[Title <String>]`: The title of the item.
+                        - `[VersionId <String>]`: The version ID of the item.
+                      - `[ShouldCaptureMinorVersion <Boolean?>]`: If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
+                    - `[DriveItem <IMicrosoftGraphDriveItem1>]`: driveItem
+                    - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
+                    - `[SharepointIds <IMicrosoftGraphSharepointIds>]`: sharepointIds
+                    - `[Versions <IMicrosoftGraphListItemVersion[]>]`: The list of previous versions of the list item.
+                      - `[LastModifiedBy <IMicrosoftGraphIdentitySet>]`: identitySet
+                      - `[LastModifiedDateTime <DateTime?>]`: Date and time the version was last modified. Read-only.
+                      - `[Publication <IMicrosoftGraphPublicationFacet>]`: publicationFacet
                       - `[Id <String>]`: 
                       - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
                   - `[Location <IMicrosoftGraphGeoCoordinates>]`: geoCoordinates
@@ -2915,7 +2929,7 @@ BODYPARAMETER `<IMicrosoftGraphSecurityUnifiedGroupSource1>`: unifiedGroupSource
     - `[Visibility <String>]`: Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
   - `[IncludedSources <String>]`: sourceType
 
-CREATEDBY `<IMicrosoftGraphIdentitySet>`: identitySet
+CREATEDBY <IMicrosoftGraphIdentitySet>: identitySet
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Application <IMicrosoftGraphIdentity>]`: identity
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -2924,7 +2938,7 @@ CREATEDBY `<IMicrosoftGraphIdentitySet>`: identitySet
   - `[Device <IMicrosoftGraphIdentity>]`: identity
   - `[User <IMicrosoftGraphIdentity>]`: identity
 
-GROUP `<IMicrosoftGraphGroup1>`: group
+GROUP <IMicrosoftGraphGroup1>: group
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[DeletedDateTime <DateTime?>]`: Date and time when this object was deleted. Always null when the object hasn't been deleted.
   - `[Id <String>]`: 
@@ -3289,7 +3303,7 @@ GROUP `<IMicrosoftGraphGroup1>`: group
           - `[Password <String>]`: For security, the password is always returned as null from a LIST or GET operation.
         - `[PhoneMethods <IMicrosoftGraphPhoneAuthenticationMethod[]>]`: Represents the phone registered to a user for authentication.
           - `[Id <String>]`: 
-          - `[PhoneNumber <String>]`: The phone number to text or call for authentication. Phone numbers use the format '+`<country code>` <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
+          - `[PhoneNumber <String>]`: The phone number to text or call for authentication. Phone numbers use the format '+<country code> <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
           - `[PhoneType <String>]`: authenticationPhoneType
           - `[SmsSignInState <String>]`: authenticationMethodSignInState
         - `[SoftwareOathMethods <IMicrosoftGraphSoftwareOathAuthenticationMethod[]>]`: 
@@ -3387,7 +3401,7 @@ GROUP `<IMicrosoftGraphGroup1>`: group
           - `[LastModifiedDateTime <DateTime?>]`: Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
           - `[Locale <String>]`: Locale of the chat message set by the client. Always set to en-us.
           - `[Mentions <IMicrosoftGraphChatMessageMention[]>]`: List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
-            - `[Id <Int32?>]`: Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding `<at id='{index}'>` tag in the message body.
+            - `[Id <Int32?>]`: Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
             - `[MentionText <String>]`: String used to represent the mention. For example, a user's display name, a team name.
             - `[Mentioned <IMicrosoftGraphChatMessageMentionedIdentitySet>]`: chatMessageMentionedIdentitySet
               - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -3668,18 +3682,32 @@ GROUP `<IMicrosoftGraphGroup1>`: group
                     - `[(Any) <Object>]`: This indicates any property can be added to this object.
                     - `[Id <String>]`: The id of the content type.
                     - `[Name <String>]`: The name of the content type.
-                  - `[DriveItem <IMicrosoftGraphDriveItem1>]`: driveItem
-                  - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
-                    - `[(Any) <Object>]`: This indicates any property can be added to this object.
-                    - `[Id <String>]`: 
-                  - `[SharepointIds <IMicrosoftGraphSharepointIds>]`: sharepointIds
-                  - `[Versions <IMicrosoftGraphListItemVersion[]>]`: The list of previous versions of the list item.
+                  - `[DocumentSetVersions <IMicrosoftGraphDocumentSetVersion[]>]`: Version information for a document set version created by a user.
+                    - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
+                      - `[(Any) <Object>]`: This indicates any property can be added to this object.
+                      - `[Id <String>]`: 
                     - `[LastModifiedBy <IMicrosoftGraphIdentitySet>]`: identitySet
                     - `[LastModifiedDateTime <DateTime?>]`: Date and time the version was last modified. Read-only.
                     - `[Publication <IMicrosoftGraphPublicationFacet>]`: publicationFacet
                       - `[(Any) <Object>]`: This indicates any property can be added to this object.
                       - `[Level <String>]`: The state of publication for this document. Either published or checkout. Read-only.
                       - `[VersionId <String>]`: The unique identifier for the version that is visible to the current caller. Read-only.
+                    - `[Id <String>]`: 
+                    - `[Comment <String>]`: Comment about the captured version.
+                    - `[CreatedBy <IMicrosoftGraphIdentitySet>]`: identitySet
+                    - `[CreatedDateTime <DateTime?>]`: Date and time when this version was created.
+                    - `[Items <IMicrosoftGraphDocumentSetVersionItem[]>]`: Items within the document set that are captured as part of this version.
+                      - `[ItemId <String>]`: The unique identifier for the item.
+                      - `[Title <String>]`: The title of the item.
+                      - `[VersionId <String>]`: The version ID of the item.
+                    - `[ShouldCaptureMinorVersion <Boolean?>]`: If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
+                  - `[DriveItem <IMicrosoftGraphDriveItem1>]`: driveItem
+                  - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
+                  - `[SharepointIds <IMicrosoftGraphSharepointIds>]`: sharepointIds
+                  - `[Versions <IMicrosoftGraphListItemVersion[]>]`: The list of previous versions of the list item.
+                    - `[LastModifiedBy <IMicrosoftGraphIdentitySet>]`: identitySet
+                    - `[LastModifiedDateTime <DateTime?>]`: Date and time the version was last modified. Read-only.
+                    - `[Publication <IMicrosoftGraphPublicationFacet>]`: publicationFacet
                     - `[Id <String>]`: 
                     - `[Fields <IMicrosoftGraphFieldValueSet>]`: fieldValueSet
                 - `[Location <IMicrosoftGraphGeoCoordinates>]`: geoCoordinates
@@ -5512,7 +5540,7 @@ GROUP `<IMicrosoftGraphGroup1>`: group
   - `[UnseenCount <Int32?>]`: Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
   - `[Visibility <String>]`: Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
 
-INPUTOBJECT `<ISecurityIdentity>`: Identity Parameter
+INPUTOBJECT <ISecurityIdentity>: Identity Parameter
   - `[AlertId <String>]`: key: id of alert
   - `[AuthoredNoteId <String>]`: key: id of authoredNote
   - `[CaseOperationId <String>]`: key: id of caseOperation

@@ -316,7 +316,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphEnterpriseCodeSigningCertificate>`: enterpriseCodeSigningCertificate
+BODYPARAMETER <IMicrosoftGraphEnterpriseCodeSigningCertificate>: enterpriseCodeSigningCertificate
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[Content <Byte[]>]`: The Windows Enterprise Code-Signing Certificate in the raw data format.
@@ -328,7 +328,7 @@ BODYPARAMETER `<IMicrosoftGraphEnterpriseCodeSigningCertificate>`: enterpriseCod
   - `[SubjectName <String>]`: The Subject Name for the cert.
   - `[UploadDateTime <DateTime?>]`: The date time of CodeSigning Cert when it is uploaded.
 
-INPUTOBJECT `<IDevicesCorporateManagementIdentity>`: Identity Parameter
+INPUTOBJECT <IDevicesCorporateManagementIdentity>: Identity Parameter
   - `[AndroidManagedAppProtectionId <String>]`: key: id of androidManagedAppProtection
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest
   - `[AssignmentFilterEvaluationStatusDetailsId <String>]`: key: id of assignmentFilterEvaluationStatusDetails
