@@ -252,7 +252,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IPaths1H3Ys40UsersUserIdDrivesDriveIdRootMicrosoftGraphPreviewPostRequestbodyContentApplicationJsonSchema1>`: .
+BODYPARAMETER <IPaths1H3Ys40UsersUserIdDrivesDriveIdRootMicrosoftGraphPreviewPostRequestbodyContentApplicationJsonSchema1>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AllowEdit <Boolean?>]`: 
   - `[Chromeless <Boolean?>]`: 
@@ -260,7 +260,7 @@ BODYPARAMETER `<IPaths1H3Ys40UsersUserIdDrivesDriveIdRootMicrosoftGraphPreviewPo
   - `[Viewer <String>]`: 
   - `[Zoom <Double?>]`: 
 
-INPUTOBJECT `<IUsersActionsIdentity>`: Identity Parameter
+INPUTOBJECT <IUsersActionsIdentity>: Identity Parameter
   - `[AccessReviewInstanceId <String>]`: key: id of accessReviewInstance
   - `[AccessReviewStageId <String>]`: key: id of accessReviewStage
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest

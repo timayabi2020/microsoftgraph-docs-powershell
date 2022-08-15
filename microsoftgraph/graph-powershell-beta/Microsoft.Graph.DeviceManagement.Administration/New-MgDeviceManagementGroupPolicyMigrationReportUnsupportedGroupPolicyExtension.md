@@ -239,7 +239,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphUnsupportedGroupPolicyExtension>`: Unsupported Group Policy Extension.
+BODYPARAMETER <IMicrosoftGraphUnsupportedGroupPolicyExtension>: Unsupported Group Policy Extension.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[ExtensionType <String>]`: ExtensionType of the unsupported extension.
@@ -247,7 +247,7 @@ BODYPARAMETER `<IMicrosoftGraphUnsupportedGroupPolicyExtension>`: Unsupported Gr
   - `[NodeName <String>]`: Node name of the unsupported extension.
   - `[SettingScope <GroupPolicySettingScope?>]`: Scope of the group policy setting.
 
-INPUTOBJECT `<IDeviceManagementAdministrationIdentity>`: Identity Parameter
+INPUTOBJECT <IDeviceManagementAdministrationIdentity>: Identity Parameter
   - `[AuditEventId <String>]`: key: id of auditEvent
   - `[CartToClassAssociationId <String>]`: key: id of cartToClassAssociation
   - `[CloudPcAuditEventId <String>]`: key: id of cloudPcAuditEvent

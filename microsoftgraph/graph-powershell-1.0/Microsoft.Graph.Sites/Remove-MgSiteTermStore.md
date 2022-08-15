@@ -8,23 +8,23 @@ schema: 2.0.0
 # Remove-MgSiteTermStore
 
 ## SYNOPSIS
-Delete navigation property termStore for sites
+Delete navigation property termStores for sites
 
 ## SYNTAX
 
-### Delete1 (Default)
+### Delete2 (Default)
 ```
 Remove-MgSiteTermStore -SiteId <String> [-IfMatch <String>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### Delete2
+### Delete
 ```
 Remove-MgSiteTermStore -SiteId <String> -StoreId <String> [-IfMatch <String>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### DeleteViaIdentity1
+### DeleteViaIdentity
 ```
 Remove-MgSiteTermStore -InputObject <ISitesIdentity> [-IfMatch <String>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
@@ -37,7 +37,7 @@ Remove-MgSiteTermStore -InputObject <ISitesIdentity> [-IfMatch <String>] [-PassT
 ```
 
 ## DESCRIPTION
-Delete navigation property termStore for sites
+Delete navigation property termStores for sites
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT 
 
 ```yaml
 Type: Microsoft.Graph.PowerShell.Models.ISitesIdentity
-Parameter Sets: DeleteViaIdentity1, DeleteViaIdentity2
+Parameter Sets: DeleteViaIdentity, DeleteViaIdentity2
 Aliases:
 
 Required: True
@@ -94,7 +94,7 @@ key: id of site
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete1, Delete2
+Parameter Sets: Delete, Delete2
 Aliases:
 
 Required: True
@@ -109,7 +109,7 @@ key: id of store
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete2
+Parameter Sets: Delete
 Aliases:
 
 Required: True
@@ -170,7 +170,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT `<ISitesIdentity>`: Identity Parameter
+INPUTOBJECT <ISitesIdentity>: Identity Parameter
   - `[BaseItemId <String>]`: key: id of baseItem
   - `[ColumnDefinitionId <String>]`: key: id of columnDefinition
   - `[ColumnLinkId <String>]`: key: id of columnLink

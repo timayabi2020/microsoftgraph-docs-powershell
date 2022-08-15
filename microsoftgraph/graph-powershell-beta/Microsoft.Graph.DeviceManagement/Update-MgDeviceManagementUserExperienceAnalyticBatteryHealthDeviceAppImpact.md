@@ -291,7 +291,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphUserExperienceAnalyticsBatteryHealthDeviceAppImpact>`: The user experience analytics battery health device app impact entity contains battery usage related information at an app level for a given device.
+BODYPARAMETER <IMicrosoftGraphUserExperienceAnalyticsBatteryHealthDeviceAppImpact>: The user experience analytics battery health device app impact entity contains battery usage related information at an app level for a given device.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[AppDisplayName <String>]`: User friendly display name for the app. Eg: Outlook
@@ -301,7 +301,7 @@ BODYPARAMETER `<IMicrosoftGraphUserExperienceAnalyticsBatteryHealthDeviceAppImpa
   - `[DeviceId <String>]`: The unique identifier of the device, Intune DeviceID or SCCM device id.
   - `[IsForegroundApp <Boolean?>]`: true if the user had active interaction with the app.
 
-INPUTOBJECT `<IDeviceManagementIdentity>`: Identity Parameter
+INPUTOBJECT <IDeviceManagementIdentity>: Identity Parameter
   - `[AdvancedThreatProtectionOnboardingDeviceSettingStateId <String>]`: key: id of advancedThreatProtectionOnboardingDeviceSettingState
   - `[AndroidForWorkAppConfigurationSchemaId <String>]`: key: id of androidForWorkAppConfigurationSchema
   - `[AndroidManagedStoreAppConfigurationSchemaId <String>]`: key: id of androidManagedStoreAppConfigurationSchema

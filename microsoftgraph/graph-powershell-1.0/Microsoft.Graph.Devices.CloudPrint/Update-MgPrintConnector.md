@@ -283,7 +283,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphPrintConnector1>`: printConnector
+BODYPARAMETER <IMicrosoftGraphPrintConnector1>: printConnector
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[AppVersion <String>]`: The connector's version.
@@ -311,7 +311,7 @@ BODYPARAMETER `<IMicrosoftGraphPrintConnector1>`: printConnector
   - `[OperatingSystem <String>]`: The connector machine's operating system version.
   - `[RegisteredDateTime <DateTime?>]`: The DateTimeOffset when the connector was registered.
 
-INPUTOBJECT `<IDevicesCloudPrintIdentity>`: Identity Parameter
+INPUTOBJECT <IDevicesCloudPrintIdentity>: Identity Parameter
   - `[GroupId <String>]`: key: id of group
   - `[PrintConnectorId <String>]`: key: id of printConnector
   - `[PrintOperationId <String>]`: key: id of printOperation
@@ -324,7 +324,7 @@ INPUTOBJECT `<IDevicesCloudPrintIdentity>`: Identity Parameter
   - `[PrinterShareId <String>]`: key: id of printerShare
   - `[UserId <String>]`: key: id of user
 
-LOCATION `<IMicrosoftGraphPrinterLocation>`: printerLocation
+LOCATION <IMicrosoftGraphPrinterLocation>: printerLocation
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AltitudeInMeters <Int32?>]`: The altitude, in meters, that the printer is located at.
   - `[Building <String>]`: The building that the printer is located in.

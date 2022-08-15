@@ -256,7 +256,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IPaths1Yczx1TAdminWindowsUpdatesDeploymentsDeploymentIdAudienceMicrosoftGraphWindowsupdatesUpdateaudiencebyidPostRequestbodyContentApplicationJsonSchema>`: .
+BODYPARAMETER <IPaths1Yczx1TAdminWindowsUpdatesDeploymentsDeploymentIdAudienceMicrosoftGraphWindowsupdatesUpdateaudiencebyidPostRequestbodyContentApplicationJsonSchema>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AddExclusions <String[]>]`: 
   - `[AddMembers <String[]>]`: 
@@ -264,7 +264,7 @@ BODYPARAMETER `<IPaths1Yczx1TAdminWindowsUpdatesDeploymentsDeploymentIdAudienceM
   - `[RemoveExclusions <String[]>]`: 
   - `[RemoveMembers <String[]>]`: 
 
-INPUTOBJECT `<IWindowsUpdatesIdentity>`: Identity Parameter
+INPUTOBJECT <IWindowsUpdatesIdentity>: Identity Parameter
   - `[CatalogEntryId <String>]`: key: id of catalogEntry
   - `[DeploymentId <String>]`: key: id of deployment
   - `[ResourceConnectionId <String>]`: key: id of resourceConnection

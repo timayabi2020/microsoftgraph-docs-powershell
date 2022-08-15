@@ -194,7 +194,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IPaths1Ssqny1UsersUserIdSecurityInformationprotectionSensitivitylabelsMicrosoftGraphSecurityEvaluateapplicationPostRequestbodyContentApplicationJsonSchema>`: .
+BODYPARAMETER <IPaths1Ssqny1UsersUserIdSecurityInformationprotectionSensitivitylabelsMicrosoftGraphSecurityEvaluateapplicationPostRequestbodyContentApplicationJsonSchema>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[ContentInfo <IMicrosoftGraphSecurityContentInfo>]`: contentInfo
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -214,7 +214,7 @@ BODYPARAMETER `<IPaths1Ssqny1UsersUserIdSecurityInformationprotectionSensitivity
     - `[ExtendedProperties <IMicrosoftGraphSecurityKeyValuePair[]>]`: 
     - `[LabelId <String>]`: 
 
-CONTENTINFO `<IMicrosoftGraphSecurityContentInfo>`: contentInfo
+CONTENTINFO <IMicrosoftGraphSecurityContentInfo>: contentInfo
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[ContentFormat <String>]`: 
   - `[Identifier <String>]`: 
@@ -223,7 +223,7 @@ CONTENTINFO `<IMicrosoftGraphSecurityContentInfo>`: contentInfo
     - `[Value <String>]`: 
   - `[State <String>]`: contentState
 
-INPUTOBJECT `<IUsersActionsIdentity>`: Identity Parameter
+INPUTOBJECT <IUsersActionsIdentity>: Identity Parameter
   - `[AccessReviewInstanceId <String>]`: key: id of accessReviewInstance
   - `[AccessReviewStageId <String>]`: key: id of accessReviewStage
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest
@@ -271,7 +271,7 @@ INPUTOBJECT `<IUsersActionsIdentity>`: Identity Parameter
   - `[UserId <String>]`: key: id of user
   - `[WindowsHelloForBusinessAuthenticationMethodId <String>]`: key: id of windowsHelloForBusinessAuthenticationMethod
 
-LABELINGOPTIONS `<IMicrosoftGraphSecurityLabelingOptions>`: labelingOptions
+LABELINGOPTIONS <IMicrosoftGraphSecurityLabelingOptions>: labelingOptions
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AssignmentMethod <String>]`: assignmentMethod
   - `[DowngradeJustification <IMicrosoftGraphSecurityDowngradeJustification>]`: downgradeJustification

@@ -209,12 +209,12 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IPathsH16W9LDeviceappmanagementDeviceappmanagementtasksDeviceappmanagementtaskIdMicrosoftGraphUpdatestatusPostRequestbodyContentApplicationJsonSchema>`: .
+BODYPARAMETER <IPathsH16W9LDeviceappmanagementDeviceappmanagementtasksDeviceappmanagementtaskIdMicrosoftGraphUpdatestatusPostRequestbodyContentApplicationJsonSchema>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Note <String>]`: 
   - `[Status <DeviceAppManagementTaskStatus?>]`: Device app management task status.
 
-INPUTOBJECT `<IDevicesCorporateManagementIdentity>`: Identity Parameter
+INPUTOBJECT <IDevicesCorporateManagementIdentity>: Identity Parameter
   - `[AndroidManagedAppProtectionId <String>]`: key: id of androidManagedAppProtection
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest
   - `[AssignmentFilterEvaluationStatusDetailsId <String>]`: key: id of assignmentFilterEvaluationStatusDetails

@@ -12,13 +12,13 @@ Invoke action restore
 
 ## SYNTAX
 
-### Restore (Default)
+### Restore1 (Default)
 ```
 Restore-MgUserDriveListItemDocumentSetVersion -DocumentSetVersionId <String> -DriveId <String>
  -ListItemId <String> -UserId <String> [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### RestoreViaIdentity
+### RestoreViaIdentity1
 ```
 Restore-MgUserDriveListItemDocumentSetVersion -InputObject <IUsersActionsIdentity> [-PassThru] [-Confirm]
  [-WhatIf] [<CommonParameters>]
@@ -36,7 +36,7 @@ key: id of documentSetVersion
 
 ```yaml
 Type: System.String
-Parameter Sets: Restore
+Parameter Sets: Restore1
 Aliases:
 
 Required: True
@@ -51,7 +51,7 @@ key: id of drive
 
 ```yaml
 Type: System.String
-Parameter Sets: Restore
+Parameter Sets: Restore1
 Aliases:
 
 Required: True
@@ -67,7 +67,7 @@ To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT 
 
 ```yaml
 Type: Microsoft.Graph.PowerShell.Models.IUsersActionsIdentity
-Parameter Sets: RestoreViaIdentity
+Parameter Sets: RestoreViaIdentity1
 Aliases:
 
 Required: True
@@ -82,7 +82,7 @@ key: id of listItem
 
 ```yaml
 Type: System.String
-Parameter Sets: Restore
+Parameter Sets: Restore1
 Aliases:
 
 Required: True
@@ -112,7 +112,7 @@ key: id of user
 
 ```yaml
 Type: System.String
-Parameter Sets: Restore
+Parameter Sets: Restore1
 Aliases:
 
 Required: True
@@ -173,7 +173,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT `<IUsersActionsIdentity>`: Identity Parameter
+INPUTOBJECT <IUsersActionsIdentity>: Identity Parameter
   - `[AccessReviewInstanceId <String>]`: key: id of accessReviewInstance
   - `[AccessReviewStageId <String>]`: key: id of accessReviewStage
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest

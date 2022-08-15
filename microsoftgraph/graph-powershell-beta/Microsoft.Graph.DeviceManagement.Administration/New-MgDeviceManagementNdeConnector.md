@@ -173,7 +173,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphNdesConnector>`: Entity which represents an OnPrem Ndes connector.
+BODYPARAMETER <IMicrosoftGraphNdesConnector>: Entity which represents an OnPrem Ndes connector.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[DisplayName <String>]`: The friendly name of the Ndes Connector.

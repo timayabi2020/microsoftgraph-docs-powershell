@@ -268,7 +268,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphSideLoadingKey>`: SideLoadingKey entity is required for Windows 8 and 8.1 devices to intall Line Of Business Apps for a tenant.
+BODYPARAMETER <IMicrosoftGraphSideLoadingKey>: SideLoadingKey entity is required for Windows 8 and 8.1 devices to intall Line Of Business Apps for a tenant.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[Description <String>]`: Side Loading Key description displayed to the ITPro Admins..
@@ -277,7 +277,7 @@ BODYPARAMETER `<IMicrosoftGraphSideLoadingKey>`: SideLoadingKey entity is requir
   - `[TotalActivation <Int32?>]`: Side Loading Key Total Activation displayed to the ITPro Admins.
   - `[Value <String>]`: Side Loading Key Value, it is 5x5 value, seperated by hiphens.
 
-INPUTOBJECT `<IDevicesCorporateManagementIdentity>`: Identity Parameter
+INPUTOBJECT <IDevicesCorporateManagementIdentity>: Identity Parameter
   - `[AndroidManagedAppProtectionId <String>]`: key: id of androidManagedAppProtection
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest
   - `[AssignmentFilterEvaluationStatusDetailsId <String>]`: key: id of assignmentFilterEvaluationStatusDetails

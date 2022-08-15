@@ -255,7 +255,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema1>`: .
+BODYPARAMETER <IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema1>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AcceptedModalities <String[]>]`: 
   - `[CallOptions <IMicrosoftGraphIncomingCallOptions1>]`: incomingCallOptions
@@ -268,7 +268,7 @@ BODYPARAMETER `<IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostReq
     - `[RemoveFromDefaultAudioGroup <Boolean?>]`: 
   - `[ParticipantCapacity <Int32?>]`: 
 
-INPUTOBJECT `<ICloudCommunicationsIdentity>`: Identity Parameter
+INPUTOBJECT <ICloudCommunicationsIdentity>: Identity Parameter
   - `[AttendanceRecordId <String>]`: key: id of attendanceRecord
   - `[AudioRoutingGroupId <String>]`: key: id of audioRoutingGroup
   - `[CallId <String>]`: key: id of call
@@ -284,7 +284,7 @@ INPUTOBJECT `<ICloudCommunicationsIdentity>`: Identity Parameter
   - `[SessionId <String>]`: key: id of session
   - `[UserId <String>]`: key: id of user
 
-MEDIACONFIG `<IMicrosoftGraphMediaConfig1>`: mediaConfig
+MEDIACONFIG <IMicrosoftGraphMediaConfig1>: mediaConfig
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[RemoveFromDefaultAudioGroup <Boolean?>]`: 
 

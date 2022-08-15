@@ -12,13 +12,13 @@ Invoke action restoreVersion
 
 ## SYNTAX
 
-### Restore (Default)
+### Restore1 (Default)
 ```
 Restore-MgDriveRootListItemVersion -DriveId <String> -ListItemVersionId <String> [-PassThru] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### RestoreViaIdentity
+### RestoreViaIdentity1
 ```
 Restore-MgDriveRootListItemVersion -InputObject <IFilesIdentity> [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
@@ -36,7 +36,7 @@ key: id of drive
 
 ```yaml
 Type: System.String
-Parameter Sets: Restore
+Parameter Sets: Restore1
 Aliases:
 
 Required: True
@@ -52,7 +52,7 @@ To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT 
 
 ```yaml
 Type: Microsoft.Graph.PowerShell.Models.IFilesIdentity
-Parameter Sets: RestoreViaIdentity
+Parameter Sets: RestoreViaIdentity1
 Aliases:
 
 Required: True
@@ -67,7 +67,7 @@ key: id of listItemVersion
 
 ```yaml
 Type: System.String
-Parameter Sets: Restore
+Parameter Sets: Restore1
 Aliases:
 
 Required: True
@@ -143,7 +143,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT `<IFilesIdentity>`: Identity Parameter
+INPUTOBJECT <IFilesIdentity>: Identity Parameter
   - `[ColumnDefinitionId <String>]`: key: id of columnDefinition
   - `[ColumnLinkId <String>]`: key: id of columnLink
   - `[ContentTypeId <String>]`: key: id of contentType

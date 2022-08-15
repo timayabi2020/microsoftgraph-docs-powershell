@@ -290,7 +290,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphManagedDeviceMobileAppConfigurationUserStatus>`: Contains properties, inherited properties and actions for an MDM mobile app configuration status for a user.
+BODYPARAMETER <IMicrosoftGraphManagedDeviceMobileAppConfigurationUserStatus>: Contains properties, inherited properties and actions for an MDM mobile app configuration status for a user.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[DevicesCount <Int32?>]`: Devices count for that user.
@@ -299,7 +299,7 @@ BODYPARAMETER `<IMicrosoftGraphManagedDeviceMobileAppConfigurationUserStatus>`: 
   - `[UserDisplayName <String>]`: User name of the DevicePolicyStatus.
   - `[UserPrincipalName <String>]`: UserPrincipalName.
 
-INPUTOBJECT `<IDevicesCorporateManagementIdentity>`: Identity Parameter
+INPUTOBJECT <IDevicesCorporateManagementIdentity>: Identity Parameter
   - `[AndroidManagedAppProtectionId <String>]`: key: id of androidManagedAppProtection
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest
   - `[AssignmentFilterEvaluationStatusDetailsId <String>]`: key: id of assignmentFilterEvaluationStatusDetails

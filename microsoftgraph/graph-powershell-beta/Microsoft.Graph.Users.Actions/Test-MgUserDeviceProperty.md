@@ -237,14 +237,14 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IPathsJpdzc3UsersUserIdDevicesMicrosoftGraphValidatepropertiesPostRequestbodyContentApplicationJsonSchema>`: .
+BODYPARAMETER <IPathsJpdzc3UsersUserIdDevicesMicrosoftGraphValidatepropertiesPostRequestbodyContentApplicationJsonSchema>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[DisplayName <String>]`: 
   - `[EntityType <String>]`: 
   - `[MailNickname <String>]`: 
   - `[OnBehalfOfUserId <String>]`: 
 
-INPUTOBJECT `<IUsersActionsIdentity>`: Identity Parameter
+INPUTOBJECT <IUsersActionsIdentity>: Identity Parameter
   - `[AccessReviewInstanceId <String>]`: key: id of accessReviewInstance
   - `[AccessReviewStageId <String>]`: key: id of accessReviewStage
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest

@@ -12,13 +12,13 @@ Update content for the navigation property driveItem in drives
 
 ## SYNTAX
 
-### Set (Default)
+### Set1 (Default)
 ```
 Set-MgDriveRootListItemDriveItemContent -DriveId <String> -InFile <String> [-BodyParameter <Stream>]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### SetViaIdentity
+### SetViaIdentity1
 ```
 Set-MgDriveRootListItemDriveItemContent -InputObject <IFilesIdentity> -InFile <String>
  [-BodyParameter <Stream>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -51,7 +51,7 @@ key: id of drive
 
 ```yaml
 Type: System.String
-Parameter Sets: Set
+Parameter Sets: Set1
 Aliases:
 
 Required: True
@@ -84,7 +84,7 @@ To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT 
 
 ```yaml
 Type: Microsoft.Graph.PowerShell.Models.IFilesIdentity
-Parameter Sets: SetViaIdentity
+Parameter Sets: SetViaIdentity1
 Aliases:
 
 Required: True
@@ -162,7 +162,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT `<IFilesIdentity>`: Identity Parameter
+INPUTOBJECT <IFilesIdentity>: Identity Parameter
   - `[ColumnDefinitionId <String>]`: key: id of columnDefinition
   - `[ColumnLinkId <String>]`: key: id of columnLink
   - `[ContentTypeId <String>]`: key: id of contentType

@@ -347,7 +347,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphMobileAppInstallSummary>`: Contains properties for the installation summary of a mobile app.
+BODYPARAMETER <IMicrosoftGraphMobileAppInstallSummary>: Contains properties for the installation summary of a mobile app.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[FailedDeviceCount <Int32?>]`: Number of Devices that have failed to install this app.
@@ -361,7 +361,7 @@ BODYPARAMETER `<IMicrosoftGraphMobileAppInstallSummary>`: Contains properties fo
   - `[PendingInstallDeviceCount <Int32?>]`: Number of Devices that have been notified to install this app.
   - `[PendingInstallUserCount <Int32?>]`: Number of Users that have 1 or more device that have been notified to install this app and have 0 devices with failures.
 
-INPUTOBJECT `<IDevicesCorporateManagementIdentity>`: Identity Parameter
+INPUTOBJECT <IDevicesCorporateManagementIdentity>: Identity Parameter
   - `[AndroidManagedAppProtectionId <String>]`: key: id of androidManagedAppProtection
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest
   - `[AssignmentFilterEvaluationStatusDetailsId <String>]`: key: id of assignmentFilterEvaluationStatusDetails

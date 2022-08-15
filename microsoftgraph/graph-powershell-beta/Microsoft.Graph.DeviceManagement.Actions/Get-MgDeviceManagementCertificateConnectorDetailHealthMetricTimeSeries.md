@@ -179,7 +179,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IPaths1Fv96BpDevicemanagementCertificateconnectordetailsIdMicrosoftGraphGethealthmetrictimeseriesPostRequestbodyContentApplicationJsonSchema>`: .
+BODYPARAMETER <IPaths1Fv96BpDevicemanagementCertificateconnectordetailsIdMicrosoftGraphGethealthmetrictimeseriesPostRequestbodyContentApplicationJsonSchema>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[TimeSeries <IMicrosoftGraphTimeSeriesParameter>]`: Parameter passed to GetHealthMetricTimeSeries when requesting snapshot time series.
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -187,7 +187,7 @@ BODYPARAMETER `<IPaths1Fv96BpDevicemanagementCertificateconnectordetailsIdMicros
     - `[MetricName <String>]`: The name of the metric for which a time series is requested.
     - `[StartDateTime <DateTime?>]`: Start time of the series being requested.
 
-INPUTOBJECT `<IDeviceManagementActionsIdentity>`: Identity Parameter
+INPUTOBJECT <IDeviceManagementActionsIdentity>: Identity Parameter
   - `[AndroidDeviceOwnerEnrollmentProfileId <String>]`: key: id of androidDeviceOwnerEnrollmentProfile
   - `[AndroidForWorkEnrollmentProfileId <String>]`: key: id of androidForWorkEnrollmentProfile
   - `[AppLogCollectionRequestId <String>]`: key: id of appLogCollectionRequest
@@ -238,7 +238,7 @@ INPUTOBJECT `<IDeviceManagementActionsIdentity>`: Identity Parameter
   - `[WindowsQualityUpdateProfileId <String>]`: key: id of windowsQualityUpdateProfile
   - `[ZebraFotaDeploymentId <String>]`: key: id of zebraFotaDeployment
 
-TIMESERIES `<IMicrosoftGraphTimeSeriesParameter>`: Parameter passed to GetHealthMetricTimeSeries when requesting snapshot time series.
+TIMESERIES <IMicrosoftGraphTimeSeriesParameter>: Parameter passed to GetHealthMetricTimeSeries when requesting snapshot time series.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[EndDateTime <DateTime?>]`: End time of the series being requested. Optional; if not specified, current time is used.
   - `[MetricName <String>]`: The name of the metric for which a time series is requested.

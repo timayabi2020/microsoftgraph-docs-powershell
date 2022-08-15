@@ -347,7 +347,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphSecuritySensitivityLabel>`: sensitivityLabel
+BODYPARAMETER <IMicrosoftGraphSecuritySensitivityLabel>: sensitivityLabel
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[Color <String>]`: 
@@ -361,7 +361,7 @@ BODYPARAMETER `<IMicrosoftGraphSecuritySensitivityLabel>`: sensitivityLabel
   - `[Sensitivity <Int32?>]`: 
   - `[Tooltip <String>]`: 
 
-INPUTOBJECT `<ISecurityIdentity>`: Identity Parameter
+INPUTOBJECT <ISecurityIdentity>: Identity Parameter
   - `[AlertId <String>]`: key: id of alert
   - `[AuthoredNoteId <String>]`: key: id of authoredNote
   - `[CaseOperationId <String>]`: key: id of caseOperation
@@ -405,7 +405,7 @@ INPUTOBJECT `<ISecurityIdentity>`: Identity Parameter
   - `[UserSecurityProfileId <String>]`: key: id of userSecurityProfile
   - `[UserSourceId <String>]`: key: id of userSource
 
-PARENT `<IMicrosoftGraphSecuritySensitivityLabel>`: sensitivityLabel
+PARENT <IMicrosoftGraphSecuritySensitivityLabel>: sensitivityLabel
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[Color <String>]`: 

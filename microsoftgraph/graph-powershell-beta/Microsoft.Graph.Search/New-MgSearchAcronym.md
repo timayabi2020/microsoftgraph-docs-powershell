@@ -236,7 +236,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER `<IMicrosoftGraphSearchAcronym>`: acronym
+BODYPARAMETER <IMicrosoftGraphSearchAcronym>: acronym
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Description <String>]`: Search answer description shown on search results page.
   - `[DisplayName <String>]`: Search answer name displayed in search results.
@@ -254,7 +254,7 @@ BODYPARAMETER `<IMicrosoftGraphSearchAcronym>`: acronym
   - `[StandsFor <String>]`: What the acronym stands for.
   - `[State <String>]`: answerState
 
-LASTMODIFIEDBY `<IMicrosoftGraphSearchIdentitySet>`: identitySet
+LASTMODIFIEDBY <IMicrosoftGraphSearchIdentitySet>: identitySet
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Application <IMicrosoftGraphSearchIdentity>]`: identity
     - `[(Any) <Object>]`: This indicates any property can be added to this object.

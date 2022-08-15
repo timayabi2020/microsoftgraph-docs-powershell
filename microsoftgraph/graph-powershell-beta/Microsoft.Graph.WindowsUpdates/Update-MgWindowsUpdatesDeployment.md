@@ -295,14 +295,14 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-AUDIENCE `<IMicrosoftGraphWindowsUpdatesDeploymentAudience>`: deploymentAudience
+AUDIENCE <IMicrosoftGraphWindowsUpdatesDeploymentAudience>: deploymentAudience
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[Exclusions <IMicrosoftGraphWindowsUpdatesUpdatableAsset[]>]`: Specifies the assets to exclude from the audience.
     - `[Id <String>]`: 
   - `[Members <IMicrosoftGraphWindowsUpdatesUpdatableAsset[]>]`: Specifies the assets to include in the audience.
 
-BODYPARAMETER `<IMicrosoftGraphWindowsUpdatesDeployment>`: deployment
+BODYPARAMETER <IMicrosoftGraphWindowsUpdatesDeployment>: deployment
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Id <String>]`: 
   - `[Audience <IMicrosoftGraphWindowsUpdatesDeploymentAudience>]`: deploymentAudience
@@ -340,13 +340,13 @@ BODYPARAMETER `<IMicrosoftGraphWindowsUpdatesDeployment>`: deployment
     - `[RequestedValue <String>]`: requestedDeploymentStateValue
     - `[Value <String>]`: deploymentStateValue
 
-INPUTOBJECT `<IWindowsUpdatesIdentity>`: Identity Parameter
+INPUTOBJECT <IWindowsUpdatesIdentity>: Identity Parameter
   - `[CatalogEntryId <String>]`: key: id of catalogEntry
   - `[DeploymentId <String>]`: key: id of deployment
   - `[ResourceConnectionId <String>]`: key: id of resourceConnection
   - `[UpdatableAssetId <String>]`: key: id of updatableAsset
 
-SETTINGS `<IMicrosoftGraphWindowsUpdatesDeploymentSettings>`: deploymentSettings
+SETTINGS <IMicrosoftGraphWindowsUpdatesDeploymentSettings>: deploymentSettings
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Monitoring <IMicrosoftGraphWindowsUpdatesMonitoringSettings>]`: monitoringSettings
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -365,7 +365,7 @@ SETTINGS `<IMicrosoftGraphWindowsUpdatesDeploymentSettings>`: deploymentSettings
     - `[DisabledSafeguardProfiles <IMicrosoftGraphWindowsUpdatesSafeguardProfile[]>]`: List of safeguards to ignore per device.
       - `[Category <String>]`: safeguardCategory
 
-STATE `<IMicrosoftGraphWindowsUpdatesDeploymentState>`: deploymentState
+STATE <IMicrosoftGraphWindowsUpdatesDeploymentState>: deploymentState
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Reasons <IMicrosoftGraphWindowsUpdatesDeploymentStateReason[]>]`: Specifies the reasons the deployment has its state value. Read-only.
     - `[Value <String>]`: deploymentStateReasonValue
